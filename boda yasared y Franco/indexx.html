@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Yasared y Franco </title>
+
+<!-- Fuentes -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Bodoni+Moda:wght@400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+<!-- PORTADA -->
+<section class="portada">
+<img src="fotos/portada.jpg" alt="Portada">
+<div class="texto-portada">
+<span class="nombre">YASARED</span>
+<span class="ampersand">y</span>
+<span class="nombre" >FRANCO</span>
+</div>
+
+<div class="contador">
+<div><span id="dias"></span><small>Días</small></div>
+<div><span id="horas"></span><small>Horas</small></div>
+<div><span id="minutos"></span><small>Min</small></div>
+<div><span id="segundos"></span><small>Seg</small></div>
+
+</div>
+</section>
+
+<!-- HISTORIA -->
+<section class="historia">
+<h2>TODO COMENZÓ EN PERÚ</h2>
+<p>
+Los dos fuimos invitados a unas conferencias en Perú, en agosto del 2025, las conferencias con enfoque de traducción de la biblia. Yo Yas sirvo en el ministerio que organizaba las conferencias y Franco sirve en un ministerio que iba ser de anfitrion. Ahí en un tiempo de mucho aprendizaje y oración (por que tu servidora Yas estaba encargada del tiempo de oración por todo el evento en este lugar como se muestra en la foto). Solo fue una semana completa que pudimos interactuar cada uno en un área diferente pero cercas para en un momento cruzar la mirada y de ahí saber que sería Dios quien nos uniría para siempre.💕
+</p>
+</section>
+
+<!-- GALERÍA -->
+<section class="galeria">
+<h2>  ⋆°•☁︎ ᯓ ✈︎ ༄˖°...⋆°•☁︎  </h2>
+<div class="carousel">
+<img src="fotos/foto1.jpg">
+<img src="fotos/foto2.jpg">
+<img src="fotos/foto3.jpg">
+<img src="fotos/foto4.jpg">
+<img src="fotos/foto5.jpg">
+</div>
+</section>
+
+<!-- DETALLES -->
+<section class="detalles">
+<h3 class="titulo-detalles">¡Te esperamos!</h3>
+
+<p class="fecha">📅 8 de Agosto 2026</p>
+
+<!-- FOTO DEL LUGAR -->
+<div class="foto-lugar">
+<img src="fotos/lugar.jpg" alt="Lugar del evento">
+</div>
+
+<p class="ubicacion">📍 Terraza Jardín Muñoz</p>
+
+<a href="https://maps.app.goo.gl/DXZR2xe54kXYpChD8" target="_blank" class="btn-mapa">
+Ubicación
+</a>
+</section>
+
+<!-- PROGRAMA -->
+<section class="programa">
+<h2>Programa</h2>
+
+<div class="timeline">
+
+<div class="timeline-item left">
+<div class="content">
+<div class="icono">⁀જ➣ ⛪︎ </div>
+<h3>Ceremonia</h3>
+<span>6:45 PM</span>
+</div>
+</div>
+
+<div class="timeline-item right">
+<div class="content">
+<div class="icono"> 𓇢𓆸 ݁⋆˖₊.𓂃 </div>
+<h3>Recepción</h3>
+<span>9:00 PM</span>
+</div>
+</div>
+
+<div class="timeline-item left">
+<div class="content">
+<div class="icono">⁀➴♡ 𓌉◯𓇋 </div>
+<h3>Cena</h3>
+<span>9:30 PM</span>
+</div>
+</div>
+
+<div class="timeline-item right">
+<div class="content">
+<div class="icono">‧ 𓀤𓀥₊˚♪ 𝄞₊˚⊹ִֶָ. </div>
+<h3>Baile</h3>
+<span>10:30 PM</span>
+</div>
+</div>
+
+<div class="timeline-item left">
+<div class="content">
+<div class="icono">*ੈ🥂✩‧₊˚</div>
+<h3>Brindis y pastel</h3>
+<span>12:00 AM</span>
+</div>
+</div>
+
+<div class="timeline-item right">
+<div class="content">
+<div class="icono">⋆｡ﾟ☁︎｡✈︎ 𖨆♡𖨆 ⋆</div>
+<h3>Fin del evento</h3>
+<span>2:00 AM</span>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- NUEVO SUBTÍTULO: ¿Cómo puedes bendecirnos? -->
+<h4>¿Cómo puedes bendecirnos?</h4>
+
+<!-- Botón para desplegar -->
+<button class="btn-consideraciones" onclick="toggleBendicion()">
+──── ୨୧ ────
+</button>
+
+<div id="info-bendicion" class="info-extra">
+<p><strong>Amada familia y queridos amigos,</strong></p>
+
+<p>
+Compartir este día con ustedes es el regalo más grande que Dios nos permite recibir.
+Su presencia, sus oraciones y su cariño significan todo para nosotros.
+</p>
+
+<p>
+Al comenzar nuestra vida juntos, también iniciaremos una nueva etapa al mudarnos a otro país,
+por lo que no podremos llevar con nosotros regalos en especie.
+</p>
+
+<p>
+Si nace en su corazón bendecirnos con un detalle, les pedimos que consideren hacerlo
+mediante una ofrenda de amor.
+</p>
+
+<p>
+Cada gesto será recibido con profunda gratitud y será parte del inicio de nuestro
+nuevo hogar y nuestros sueños juntos.
+</p>
+</div>
+
+</section>
+
+<script>
+function toggleInfo() {
+var info = document.getElementById("info-extra");
+info.style.display = (info.style.display === "block") ? "none" : "block";
+}
+
+function toggleBendicion() {
+var info = document.getElementById("info-bendicion");
+info.style.display = (info.style.display === "block") ? "none" : "block";
+}
+</script>
+
+<!-- CONSIDERACIONES -->
+<section class="consideraciones">
+<h2>Consideraciones</h2>
+
+<!-- Botón original -->
+<button class="btn-consideraciones" onclick="toggleInfo()">
+Ver opciones 
+</button>
+
+<div id="info-extra" class="info-extra">
+<p class="tipo">Formal – Semi Formal</p>
+<p>Colores claros</p>
+<p class="restriccion">Evitar los colores blanco y rojo.</p>
+<hr>
+<p>Habrá un área especial para niños durante el evento.</p>
+</div>
+
+<script>
+const items = document.querySelectorAll('.timeline-item');
+
+function showOnScroll() {
+const triggerBottom = window.innerHeight * 0.85;
+
+items.forEach(item => {
+const itemTop = item.getBoundingClientRect().top;
+
+if (itemTop < triggerBottom) {
+item.classList.add('visible');
+}
+});
+}
+
+window.addEventListener('scroll', showOnScroll);
+showOnScroll();
+
+
+/* CONTADOR */
+document.addEventListener("DOMContentLoaded", function() {
+
+const fechaEvento = new Date("2026-08-08T18:00:00").getTime();
+
+function actualizarContador() {
+
+const ahora = new Date().getTime();
+const diferencia = fechaEvento - ahora;
+
+if (diferencia <= 0) return;
+
+const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+
+document.getElementById("dias").innerHTML = dias;
+document.getElementById("horas").innerHTML = horas;
+document.getElementById("minutos").innerHTML = minutos;
+document.getElementById("segundos").innerHTML = segundos;
+}
+
+actualizarContador();
+setInterval(actualizarContador, 1000);
+
+});
+
+
+</script>
+
+
+
+</body>
+</html>

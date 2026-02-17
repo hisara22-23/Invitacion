@@ -1,0 +1,387 @@
+body {
+margin: 0;
+font-family: 'Playfair Display', serif;
+background: #fdfaf4;
+text-align: center;
+color: #333;
+}
+
+/* PORTADA */
+.portada {
+position: relative;
+}
+
+.portada img {
+width: 100%;
+height: auto;
+display: block;
+}
+
+.texto-portada {
+position: absolute;
+top: 22%;
+right: 15%;
+color: white;
+text-shadow: 0 4px 14px rgba(0,0,0,0.4);
+display: flex;
+align-items: center;
+gap: 15px;
+}
+
+.nombre {
+font-family: 'Bodoni Moda', serif;
+font-size: 42px;
+font-weight: 600;
+letter-spacing: 4px;
+}
+
+.ampersand {
+font-family: 'Great Vibes', cursive;
+font-size: 60px;
+margin-top: 10px;
+}
+
+/* HISTORIA */
+.historia {
+padding: 30px 20px;
+}
+
+.historia h2 {
+font-size: 22px;
+margin-bottom: 15px;
+}
+
+/* GALERÍA */
+.galeria {
+padding: 30px 20px;
+}
+
+.galeria h2 {
+margin-bottom: 20px;
+}
+
+.carousel {
+display: flex;
+overflow-x: auto;
+scroll-snap-type: x mandatory;
+gap: 15px;
+padding-bottom: 10px;
+}
+
+.carousel::-webkit-scrollbar {
+display: none;
+}
+
+.carousel img {
+flex: 0 0 85%;
+max-width: 320px;
+border-radius: 20px;
+scroll-snap-align: center;
+object-fit: cover;
+box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* DETALLES */
+.detalles {
+padding: 40px 20px;
+background: white;
+}
+
+.btn-mapa {
+display: inline-block;
+margin-top: 25px;
+padding: 12px 30px;
+background: #d4af37;
+color: white;
+text-decoration: none;
+border-radius: 30px;
+font-size: 14px;
+letter-spacing: 1px;
+transition: 0.3s;
+}
+
+.btn-mapa:hover {
+background: #b8962e;
+}
+
+/* CONSIDERACIONES */
+.consideraciones {
+padding: 40px 20px;
+background: white;
+}
+
+.consideraciones h2 {
+font-size: 22px;
+margin-bottom: 20px;
+}
+
+.btn-consideraciones {
+padding: 12px 28px;
+background: #d4af37;
+color: white;
+border: none;
+border-radius: 30px;
+font-family: 'Playfair Display', serif;
+font-size: 14px;
+letter-spacing: 1px;
+cursor: pointer;
+transition: 0.3s;
+}
+
+.btn-consideraciones:hover {
+background: #b8962e;
+}
+
+.info-extra {
+display: none;
+margin-top: 20px;
+font-size: 15px;
+line-height: 1.6;
+}
+
+.tipo {
+font-size: 18px;
+font-weight: 500;
+}
+
+.restriccion {
+margin-top: 10px;
+font-weight: 500;
+color: #b85c5c;
+}
+
+.info-extra hr {
+margin: 20px auto;
+width: 60%;
+border: none;
+border-top: 1px solid #ddd;
+}
+
+<script>
+const items = document.querySelectorAll('.timeline-item');
+
+function showOnScroll() {
+const triggerBottom = window.innerHeight * 0.85;
+
+items.forEach(item => {
+const itemTop = item.getBoundingClientRect().top;
+
+if (itemTop < triggerBottom) {
+item.classList.add('visible');
+}
+});
+}
+
+window.addEventListener('scroll', showOnScroll);
+showOnScroll();
+
+
+/* ================= PROGRAMA ================= */
+
+.programa {
+padding: 40px 20px 60px;
+background: #fdfaf4; /* mismo tono que tu body */
+}
+
+.programa h2 {
+font-size: 22px;
+margin-bottom: 50px;
+}
+
+/* CONTENEDOR GENERAL */
+.timeline {
+position: relative;
+max-width: 900px;
+margin: auto;
+}
+
+/* LÍNEA VERTICAL CENTRAL */
+.timeline::before {
+content: "";
+position: absolute;
+width: 2px;
+background-color: #d4af37; /* dorado igual a tus botones */
+top: 0;
+bottom: 0;
+left: 50%;
+transform: translateX(-50%);
+}
+
+/* CADA EVENTO */
+.timeline-item {
+position: relative;
+width: 50%;
+padding: 30px 50px;
+box-sizing: border-box;
+opacity: 0;
+transform: translateY(40px);
+transition: all 0.8s ease;
+}
+
+/* Animación visible */
+.timeline-item.visible {
+opacity: 1;
+transform: translateY(0);
+}
+
+/* Punto sobre la línea */
+.timeline-item::before {
+content: "";
+position: absolute;
+width: 16px;
+height: 16px;
+background: white;
+border: 3px solid #d4af37;
+border-radius: 50%;
+top: 35px;
+z-index: 2;
+}
+
+/* LADO IZQUIERDO */
+.timeline-item.left {
+left: 0;
+text-align: right;
+}
+
+.timeline-item.left::before {
+right: -8px;
+}
+
+/* LADO DERECHO */
+.timeline-item.right {
+left: 50%;
+text-align: left;
+}
+
+.timeline-item.right::before {
+left: -8px;
+}
+
+.content h3 {
+font-size: 18px;
+margin: 8px 0 4px;
+}
+
+.content span {
+font-size: 15px;
+color: #777;
+}
+
+.icono {
+font-size: 26px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media screen and (max-width: 768px) {
+
+.timeline::before {
+left: 15px;
+}
+
+.timeline-item {
+width: 100%;
+padding-left: 50px;
+padding-right: 20px;
+}
+
+.timeline-item.left,
+.timeline-item.right {
+left: 0;
+text-align: left;
+}
+
+.timeline-item::before {
+left: 7px;
+}
+}
+
+/* ================= DETALLES MEJORADOS ================= */
+
+.titulo-detalles {
+font-size: 32px;
+margin-bottom: 25px;
+font-family: 'Bodoni Moda', serif;
+letter-spacing: 2px;
+}
+
+.fecha {
+font-size: 18px;
+margin-bottom: 20px;
+}
+
+.foto-lugar {
+margin: 5px 0;
+display: flex;
+justify-content: center;
+}
+
+/* ================= EFECTO NOMBRES ================= */
+
+.nombre {
+font-family: 'Bodoni Moda', serif;
+font-size: 42px;
+font-weight: 600;
+letter-spacing: 6px;
+position: relative;
+animation: fadeSlide 2s ease forwards;
+opacity: 0;
+}
+
+.ampersand {
+font-family: 'Great Vibes', cursive;
+font-size: 65px;
+animation: fadeSlide 2.5s ease forwards;
+opacity: 0;
+}
+
+/* Línea decorativa debajo */
+.texto-portada::after {
+content: "";
+position: absolute;
+bottom: -20px;
+left: 0;
+width: 100%;
+height: 2px;
+background: linear-gradient(to right, transparent, #d4af37, transparent);
+}
+
+/* Animación */
+@keyframes fadeSlide {
+from {
+opacity: 0;
+transform: translateY(30px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+/* ================= CONTADOR ================= */
+
+.contador {
+position: absolute;
+bottom: 8%;
+left: 50%;
+transform: translateX(-50%);
+display: flex;
+gap: 20px;
+color: white;
+text-align: center;
+}
+
+.contador div {
+display: flex;
+flex-direction: column;
+}
+
+.contador span {
+font-size: 46px;
+font-family: 'Bodoni Moda', serif;
+}
+
+.contador small {
+font-size: 20px;
+letter-spacing: 4px;
+}
